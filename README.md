@@ -12,6 +12,9 @@ Cursor based pagination library for Rails.
 # If cursor is nil, get the newest 100 posts.
 @posts = Post.after(id: params[:cursor]).limit(100)
 
+# Also you can use other colum as cursor instead of id
+@posts = Post.before(created_at: params[:cursor]).limit(100)
+
 @posts.has_next?   # => true/false
 @posts.next_cursor # => value of cursor column/nil
 ```
