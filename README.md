@@ -19,7 +19,11 @@ Cursor based pagination library for Rails.
 @posts.next_cursor # => value of cursor column/nil
 ```
 
-In the template, if you use [Bootstrap 4.x](https://getbootstrap.com/docs/4.3/components/pagination/), pagers are expressed as below:
+Note that if multiple data have the same cursor value (like `created_at` at the same time), they appear in duplicate.
+
+### In the template
+
+If you use [Bootstrap 4.x](https://getbootstrap.com/docs/4.3/components/pagination/), pagers are expressed as below:
 
 ```html
 <nav aria-label="pagination">
