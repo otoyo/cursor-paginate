@@ -30,6 +30,7 @@ jobs:
           name: install dependencies
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
+            cd spec/dummy && bundle install --jobs=4 --retry=3 && cd ../../
 
       - save_cache:
           paths:
@@ -37,8 +38,7 @@ jobs:
           key: v1-dependencies-{{ checksum "cursor_pagination.gemspec" }}
 
       # Database setup
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
+      - run: cd spec/dummy && bundle exec rake db:schema:load && cd ../../
 
       # run tests!
       - run:
