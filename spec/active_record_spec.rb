@@ -82,6 +82,26 @@ describe "RelationMethods" do
       end
     end
 
+    context "invalid column given" do
+      let(:cursor_pos) { 3 }
+      let(:posts) { Post.order("id desc") }
+      let(:cursor) { posts[cursor_pos].id }
+
+      subject { -> { Post.before(none: cursor) } }
+
+      it { is_expected.to raise_error(CursorPagination::InvalidColumnGiven) }
+    end
+
+    context "limit not set" do
+      let(:cursor_pos) { 3 }
+      let(:posts) { Post.order("id desc") }
+      let(:cursor) { posts[cursor_pos].id }
+
+      subject { -> { Post.before(id: cursor).has_next? } }
+
+      it { is_expected.to raise_error(CursorPagination::LimitNotSet) }
+    end
+
     context "other condition is given" do
       let(:cursor_pos) { 3 }
       let(:cursor) { Post.where(is_published: false).order("id desc")[cursor_pos].id }
@@ -157,6 +177,26 @@ describe "RelationMethods" do
 
         it_behaves_like "no next_cursor"
       end
+    end
+
+    context "invalid column given" do
+      let(:cursor_pos) { 3 }
+      let(:posts) { Post.order("id desc") }
+      let(:cursor) { posts[cursor_pos].id }
+
+      subject { -> { Post.after(none: cursor) } }
+
+      it { is_expected.to raise_error(CursorPagination::InvalidColumnGiven) }
+    end
+
+    context "limit not set" do
+      let(:cursor_pos) { 3 }
+      let(:posts) { Post.order("id desc") }
+      let(:cursor) { posts[cursor_pos].id }
+
+      subject { -> { Post.after(id: cursor).has_next? } }
+
+      it { is_expected.to raise_error(CursorPagination::LimitNotSet) }
     end
 
     context "other condition is given" do
