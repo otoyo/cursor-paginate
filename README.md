@@ -1,4 +1,4 @@
-# cursor\_pagination
+# cursor\_pagination [![CircleCI](https://circleci.com/gh/otoyo/cursor_pagination.svg?style=svg)](https://circleci.com/gh/otoyo/cursor_pagination)
 Cursor based pagination library for Rails.
 
 ## Usage
