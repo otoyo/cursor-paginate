@@ -14,7 +14,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "cursor_pagination"
+require "cursor-paginate"
 
 module Dummy
   class Application < Rails::Application

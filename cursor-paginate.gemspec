@@ -1,17 +1,17 @@
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
-require "cursor_pagination/version"
+require "cursor-paginate/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "cursor_pagination"
+  spec.name        = "cursor-paginate"
   spec.version     = CursorPagination::VERSION
   spec.authors     = ["otoyo"]
   spec.email       = ["hiroki.t.1988@gmail.com"]
-  spec.homepage    = "https://github.com/otoyo/cursor_pagination"
+  spec.homepage    = "https://github.com/otoyo/cursor-paginate"
   spec.summary     = "Cursor based pagination library for Rails."
-  spec.description = "cursor_pagination is a cursor based pagination library for Ruby on Rails."
+  spec.description = "cursor-paginate is a cursor based pagination library for Ruby on Rails."
   spec.license     = "MIT"
 
   spec.files = Dir["{lib,spec}/**/*", "MIT-LICENSE", "README.md"]

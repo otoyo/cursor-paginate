@@ -1,5 +1,5 @@
 require "active_record"
-require "cursor_pagination/errors"
+require "cursor-paginate/errors"
 
 module CursorPagination
   module ActiveRecord
