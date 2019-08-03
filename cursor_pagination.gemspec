@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description = "cursor_pagination is a cursor based pagination library for Ruby on Rails."
   spec.license     = "MIT"
 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.files = Dir["{lib,spec}/**/*", "MIT-LICENSE", "README.md"]
 
   spec.add_dependency "rails", "~> 5.2.3"
 
