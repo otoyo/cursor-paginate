@@ -1,4 +1,4 @@
-# cursor-paginate [![CircleCI](https://circleci.com/gh/otoyo/cursor-paginate.svg?style=svg)](https://circleci.com/gh/otoyo/cursor-paginate)
+# cursor-paginate [![Gem Version](https://badge.fury.io/rb/cursor-paginate.svg)](https://badge.fury.io/rb/cursor-paginate) [![CircleCI](https://circleci.com/gh/otoyo/cursor-paginate.svg?style=svg)](https://circleci.com/gh/otoyo/cursor-paginate)
 Cursor based pagination library for Rails.
 
 ## Usage
